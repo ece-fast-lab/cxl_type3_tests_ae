@@ -1,0 +1,18 @@
+; fio-rand-read.job for fiotest
+
+[RAND_FIO]
+name=fo-rand-read-zipf
+filename=/home/yans3/ssd_mount/123
+rw=randread
+
+ioengine=sync
+random_distribution=zipf:0.99
+direct=0
+bs=2048K
+numjobs=4
+size=50G
+
+time_based
+ramp_time=10s
+runtime=90
+group_reporting

@@ -1,0 +1,14 @@
+recordcount=5000000
+operationcount=2000000
+hdrhistogram.percentiles=50,75,90,95,99,99.9,99.99
+
+workload=site.ycsb.workloads.CoreWorkload
+
+readallfields=true
+
+readproportion=0.95
+updateproportion=0.05
+scanproportion=0
+insertproportion=0
+
+requestdistribution=uniform
