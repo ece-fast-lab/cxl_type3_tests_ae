@@ -42,13 +42,16 @@ These are the hardware used to produce the figures:
 ### DeathStarBench
 Please follow the DeathStarBench(DSB) [repository](https://github.com/delimitrou/DeathStarBench) to setup the benchmark.
 
-Please follow the steps in this [documentation](database_bind.pdf) on generating docker images that bind the memory to the CXL node.
+Please follow the steps in this [documentation](database_bind.pdf) to generate docker images that bind the memory to the CXL node.
+1. The fig_6 execution scripts take "local" or "remote" as argument and overwrite the `docker-compose.yml` file with `docker-compose-local.yml` or `docker-compose-remote.yml`.
+2. The two `yml` differ by the names of the database images.
+3. Please name the binded images by the node that they binds to, and update the two yml if necessary.
 
 The following steps is performed within the `socialNetwork` folder:
-1. Place all the yml script (docker-compose-\*.sh) into the 
+1. Place all the yml script (docker-compose-\*.sh) into this folder.
 
 The following steps is performed within the `socialNetwork/wrk2` folder:
-1. Place all the shell script (fig\_6i\*.sh) into this folder.
+1. Place all the shell script (fig\_6\*.sh) into this folder.
 
 These scripts will run the social network framework in loop, and the generated docker images may take up many spaces. The command below will [clean the images](https://middleware.io/blog/docker-cleanup/). It's recommandated to execute this command before each testing.
 ```

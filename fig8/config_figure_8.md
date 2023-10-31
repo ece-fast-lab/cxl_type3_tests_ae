@@ -52,6 +52,7 @@ fallocate -l 50G 123
 ```
 
 4. Modify each file in the `test_config` to point to the absolute path of this file.
+    1. The `filename` parameter should be updated.
 
 5. Make sure to perform a full write to the file; otherwise, the disk is not read during FIO test.
     1. It's recommanded to change one of the `test_config` file from random read to random write, which will write the full disk. Then you may change it back for the evaluation.

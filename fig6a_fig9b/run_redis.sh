@@ -52,8 +52,7 @@ if [ `redis-cli ping` == "PONG" ]; then
     fi
 fi
 
-# Closer node is node 1 (without SNC)
-SNC_local=4
+SNC_local=0
 CXL_node=8
 
 sudo pkill -f redis-server

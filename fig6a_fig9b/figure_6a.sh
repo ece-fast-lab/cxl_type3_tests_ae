@@ -1,9 +1,8 @@
 # workload r = a, s = b, t = c ....
 YCSB_WORKLOADS=("r")
 ITLV_RATIO=(75 50 25)
-#NODE=("local" "remote")
-NODE=("remote")
-ITERATION=1
+NODE=("local" "remote")
+ITERATION=5
 
 bash ../util_scripts/config_all.sh
 
